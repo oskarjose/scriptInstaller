@@ -151,12 +151,12 @@ After=network.target
 User=root
 Group=root
 Type=forking
-ExecStart=/usr/local/bin/threadcoind
+ExecStart=/usr/local/bin/threadcoind -daemon -conf=/root/.threadcoincore/threadcoin.conf -datadir=/root/.threadcoincore
 ExecStop=/usr/local/bin/threadcoind-cli stop
 Restart=always
 PrivateTmp=true
 TimeoutStopSec=60s
-TimeoutStartSec=10s
+TimeoutStartSec=30s
 StartLimitInterval=120s
 StartLimitBurst=5
 [Install]
