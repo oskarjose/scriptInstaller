@@ -184,7 +184,7 @@ function setup_node() {
   create_key
   update_config
   enable_firewall
-  #configure_systemd
+  configure_systemd
   Masternode_Configuration
   important_information
 }
